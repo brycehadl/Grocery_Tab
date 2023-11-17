@@ -1,28 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './style.scss';
 
-const Card = () => {
-  const [data, setData] = useState({
-    item: 'Loading...',
-    price: 'Loading...',
-    expirationDate: 'Loading...',
-  });
-
-  const apiUrl = 'https://api.example.com/product';
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(apiUrl);
-        const apiData = await response.json();
-        setData(apiData);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-
-    fetchData();
-  }, []);
+const Card = ({ product }) => {
 
   return (
     <div className="container mt-4">
