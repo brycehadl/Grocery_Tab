@@ -1,18 +1,22 @@
 import './style.scss';
+import { Button } from 'react-bootstrap';
 
-export default function Home() {
+const Home = () => {
+
+  const handleButton = async () => {}
+
   return (
     <div id="home-page">
-      <h1>Home</h1>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsum, quibusdam rerum quia delectus dolor quis reiciendis accusamus, voluptate rem tempore error in sed molestiae deleniti distinctio nemo at. Praesentium.
-      </p>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam ipsum, quibusdam rerum quia delectus dolor quis reiciendis accusamus, voluptate rem tempore error in sed molestiae deleniti distinctio nemo at. Praesentium.
-      </p>
+      <div>
+        <h1>Grocery Tab</h1>
+      </div>
+      <div>
+        <Button type="button" onClick={handleButton}>
+          Checkout
+        </Button>
+      </div>
     </div>
   );
 };
 
+export default Home;
