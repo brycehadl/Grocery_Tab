@@ -10,7 +10,6 @@ const resolvers = {
       }
 
       return await User.findById(context.user._id);
-    },
   },
   categories: async () => {
     return await Category.find();
@@ -65,6 +64,7 @@ const resolvers = {
 
     return { session: session.id };
   },
+},
   Mutation: {
     addUser: async (parent, args) => {
       const user = await User.create(args);
@@ -103,7 +103,6 @@ const resolvers = {
 
       return { token };
     },
-  },
   addOrder: async (parent, { products }, context) => {
     console.log(context);
     if (context.user) {
@@ -144,6 +143,7 @@ const resolvers = {
 
     throw new AuthenticationError("Not logged in");
   },
+},
 };
 
 module.exports = resolvers;

@@ -16,6 +16,7 @@ type User {
   }
 
   type Query {
+    categories: [Category]
     user: User
     users: [User]
     products: [Product]
