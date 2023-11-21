@@ -1,28 +1,25 @@
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
+const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 
-const { Schema } = mongoose;
-
-const userSchema = new Schema({
-  firstName: {
+const UserSchema = new Schema({
+  username: {
     type: String,
     required: true,
-    trim: true
-  },
-  lastName: {
-    type: String,
-    required: true,
-    trim: true
+    trim: true,
   },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
     required: true,
-    minlength: 5
+    minlength: 8,
+  },
+  account: {
+    type: String,
+    required: true,
   },
   store: {
     type: Schema.Types.ObjectId,
@@ -30,8 +27,9 @@ const userSchema = new Schema({
   },
 });
 
-userSchema.pre('save', async function (next) {
-  if (this.isNew || this.isModified('password')) {
+//pre-save middleware to create password
+UserSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
     const saltRounds = 10;
     this.password = await bcrypt.hash(this.password, saltRounds);
   }
@@ -39,8 +37,11 @@ userSchema.pre('save', async function (next) {
   next();
 });
 
-userSchema.methods.verifyPassword = async function (password) {
+// compares incoming password with the hashed password
+UserSchema.methods.isCorrectPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
 
-module.exports = mongoose.model('User', userSchema);
+const User = model("User", UserSchema);
+
+module.exports = User;
