@@ -93,7 +93,7 @@ const resolvers = {
         throw AuthenticationError;
       }
 
-      const correctPw = await user.verifyPassword(password);
+      const correctPw = await user.isCorrectPassword(password);
 
       if (!correctPw) {
         throw AuthenticationError;
