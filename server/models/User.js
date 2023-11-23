@@ -17,6 +17,10 @@ const UserSchema = new Schema({
     required: true,
     minlength: 8,
   },
+  account: {
+    type: String,
+    required: true,
+  },
   store: {
     type: Schema.Types.ObjectId,
     ref: "storeId",

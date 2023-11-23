@@ -4,9 +4,11 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import App from './App.jsx';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
+import Checkout from './pages/Checkout';
 import NotFound from './pages/NotFound.jsx'
 
 import './index.css'
+
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
       {
         path: '/profile',
         element: <Profile />
+      },
+      {
+        path: '/checkout',
+        element: <Checkout />
       }
     ]
   }

@@ -24,7 +24,7 @@ export default function Nav() {
             <>
               <Link to="/">Home</Link>
               <Link to="/profile">Profile</Link>
-              <Link to="/Recent_Purchases">Recent Purchases</Link>
+              <Link to="/checkout">Checkout</Link>
               <div className="logout-link" onClick={() => Auth.logout()}>Logout</div>
             </>
           )}

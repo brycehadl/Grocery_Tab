@@ -31,7 +31,9 @@ export const QUERY_PRODUCT = gql`
       description
       image
       quantity
-      category
+      category {
+        name
+      }
     }
   }
 `;
@@ -45,7 +47,9 @@ export const QUERY_PRODUCTS = gql`
       description
       image
       quantity
-      category
+      category {
+        name
+      }
     }
   }
 `;
@@ -73,7 +77,7 @@ export const QUERY_STORES = gql`
 `;
 
 export const QUERY_CHECKOUT = gql`
-  query checkout($products: ID!) {
+  query checkout($products: [ID!]!) {
     checkout(products: $products) {
       session
     }
