@@ -12,9 +12,9 @@ const initialState = {
     cart: [],
     products: [],
     categories: []
-  }
+}
 
-export const reducer = (state, { state = initialState, action }) => {
+export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_TO_CART:
           return {

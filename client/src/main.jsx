@@ -5,7 +5,6 @@ import App from './App.jsx';
 import Home from './pages/Home';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound.jsx'
-
 import './index.css'
 
 const router = createBrowserRouter([
