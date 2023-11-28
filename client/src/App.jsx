@@ -10,9 +10,9 @@ import {
 import { StoreProvider } from './utils/store-context';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
-import Login from './components/Login';
-import Auth from './utils/auth'
+import Auth from './utils/auth';
 
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './app.scss';
 
 const httpLink = createHttpLink({ uri: '/graphql' });
@@ -39,7 +39,7 @@ function App() {
       <StoreProvider>
         <div id="app-shell">
           <Nav />
-          {Auth.loggedIn() ? <Outlet /> : <Login />}
+          <Outlet />
           <Footer />
         </div>
       </StoreProvider>
