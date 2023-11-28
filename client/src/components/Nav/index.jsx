@@ -1,17 +1,9 @@
 import { Link } from "react-router-dom";
-
-// import { THEME_TOGGLE } from "../../utils/actions";
-// import { useStoreContext } from "../../utils/store-context";
-
 import Auth from "../../utils/auth";
-
-// import logo from '../../assets/images/logo.png';
-// import darkToggle from '../../assets/images/dark-toggle.svg';
 
 import './style.scss';
 
 export default function Nav() {
-  // const [theme, dispatch] = useStoreContext('theme');
 
   return (
     <header>
@@ -22,6 +14,9 @@ export default function Nav() {
 
       <div>
         <nav>
+          {!Auth.loggedIn() && (
+            <Link to="/login">Login</Link>
+          )}
           {Auth.loggedIn() && (
             <>
               <Link to="/">Home</Link>
