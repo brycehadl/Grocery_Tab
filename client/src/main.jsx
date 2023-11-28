@@ -9,7 +9,7 @@ import NotFound from './pages/NotFound.jsx'
 import SignUp from './pages/SignUp';
 import Login from './components/Login';
 
-import './index.css';
+import './index.scss';
 
 const router = createBrowserRouter([
   {

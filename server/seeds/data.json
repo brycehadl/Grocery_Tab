@@ -2,8 +2,10 @@
     "user": {
         "firstName": "Test",
         "lastName": "User",
-        "email": "running11111@gmail.com",
-        "password": "password",
+
+        "email": "testing123@gmail.com",
+        "password": "password1",
+
         "username": "Bryce"
     }
 }
