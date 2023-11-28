@@ -7,9 +7,9 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound.jsx'
 
 import SignUp from './pages/SignUp';
-import Login from './components/Login/index.jsx';
+import Login from './components/Login';
 
-import './index.css'
+import './index.css';
 
 const router = createBrowserRouter([
   {
