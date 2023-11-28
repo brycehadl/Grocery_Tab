@@ -3,8 +3,8 @@
         "firstName": "Test",
         "lastName": "User",
 
-        "email": "testing123@gmail.com",
-        "password": "password1",
+        "email": "test123@gmail.com",
+        "password": "password",
 
         "username": "Bryce"
     }
