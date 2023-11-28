@@ -13,7 +13,7 @@ export default function Nav() {
       </div> */}
 
       <div>
-        <nav>
+        <nav className="navbar">
           {!Auth.loggedIn() && (
             <Link to="/login">Login</Link>
           )}
@@ -22,7 +22,7 @@ export default function Nav() {
               <Link to="/">Home</Link>
               <Link to="/profile">Profile</Link>
               <Link to="/Recent_Purchases">Recent Purchases</Link>
-              <div className="logout-link" onClick={() => Auth.logout()}>Logout</div>
+              <div id="logout" className="logout-link" onClick={() => Auth.logout()}>Logout</div>
             </>
           )}
         </nav>

@@ -8,6 +8,8 @@ header {
     background-color: #434343;
     color: #fff;
 
+    
+
     nav {
         display: inline-block;
         font-size: 1.5rem;
@@ -35,5 +37,11 @@ header {
             margin: 0;
             margin-left: 1rem;
         }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .navbar{
+        width: 100%;
     }
 }
