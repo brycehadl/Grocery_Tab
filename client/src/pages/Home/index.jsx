@@ -1,9 +1,18 @@
 import './style.scss';
 import { Button } from 'react-bootstrap';
+import { useEffect } from 'react';
+import { redirect } from 'react-router-dom';
+import Auth from '../../utils/auth';
 
 const Home = () => {
 
-  const handleButton = async () => {}
+  const handleButton = async () => {};
+
+  useEffect(() => {
+    if (!Auth.loggedIn) {
+      redirect('/login');
+    } 
+  }, []);
 
   return (
     <div id="home-page">
