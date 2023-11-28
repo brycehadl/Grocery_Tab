@@ -14,7 +14,6 @@ import Auth from './utils/auth';
 
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './app.scss';
-
 const httpLink = createHttpLink({ uri: '/graphql' });
 
 const authLink = setContext((_, { headers }) => {
@@ -42,6 +41,7 @@ function App() {
           <Outlet />
           <Footer />
         </div>
+
       </StoreProvider>
     </ApolloProvider>
   )

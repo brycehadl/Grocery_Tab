@@ -3,10 +3,12 @@ import { Button } from 'react-bootstrap';
 import { useEffect } from 'react';
 import { redirect } from 'react-router-dom';
 import Auth from '../../utils/auth';
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
 
-  const handleButton = async () => {};
+
 
   useEffect(() => {
     if (!Auth.loggedIn) {
@@ -20,9 +22,13 @@ const Home = () => {
         <h1>Grocery Tab</h1>
       </div>
       <div>
-        <Button type="button" onClick={handleButton}>
-          Checkout
-        </Button>
+      <Link to="/checkout">
+                <Button type="button">
+                    Checkout
+                </Button>
+            </Link>
+
+       
       </div>
     </div>
   );
