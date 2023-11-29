@@ -18,15 +18,16 @@ const Home = () => {
 
   return (
     <div id="home-page" className='home-page'>
-      <div>
-        <h1>Grocery Tab</h1>
-      </div>
-      <div>
-      <Link to="/checkout">
-                <Button type="button">
+      <div id='Header-Home'>
+        <span id="title-home">Grocery Tab</span>
+        <Link to="/checkout" id='checkout'>
+                <Button type="button" class='btn btn-success'>
                     Checkout
                 </Button>
             </Link>
+      </div>
+      <div>
+
 
        
       </div>
