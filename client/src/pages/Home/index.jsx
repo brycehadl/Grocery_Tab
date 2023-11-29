@@ -17,7 +17,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div id="home-page">
+    <div id="home-page" className='home-page'>
       <div>
         <h1>Grocery Tab</h1>
       </div>
