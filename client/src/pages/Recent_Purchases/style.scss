@@ -1,11 +1,11 @@
-#home-page {
-    height: 70vh;
-
 #recent-purchases-page {
+    height: 70vh;
 
     h1 {
         margin: 4rem auto;
         text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     p {
@@ -14,5 +14,7 @@
         font-size: 1.3rem;
         line-height: 180%;
         margin: 2rem auto;
+        display: flex;
+        justify-content: center;
     }
-}}
+}
