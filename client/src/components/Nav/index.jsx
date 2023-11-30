@@ -21,7 +21,7 @@ export default function Nav() {
             <>
               <Link to="/">Home</Link>
               <Link to="/profile">Profile</Link>
-              <Link to="/Recent_Purchases">Recent Purchases</Link>
+              <Link to="/recent-purchases">Recent Purchases</Link>
               <div id="logout" className="logout-link" onClick={() => Auth.logout()}>Logout</div>
             </>
           )}

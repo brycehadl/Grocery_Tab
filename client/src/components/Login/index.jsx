@@ -12,7 +12,6 @@ import { useMutation } from '@apollo/client';
 
 import { LOGIN_MUTATION } from '../../utils/mutations'
 import Auth from '../../utils/auth';
-import SignUp from '../../pages/SignUp/index';
 
 import './style.scss';
 
@@ -36,7 +35,7 @@ export default function Login() {
     }
 
     return (
-        <MDBContainer className="p-3 my-5 d-flex flex-column w-50">
+        <MDBContainer className="container p-3 my-5 d-flex flex-column w-50">
             <form id="login-form" onSubmit={logingHandler}>
 
                 <h2 id='login-h2' className='d-flex justify-content-center'>Login</h2>
