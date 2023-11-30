@@ -16,8 +16,9 @@ export default function Profile() {
       dispatch({ type: USER_PROFILE, payload: data.user })
     }
   }, [data]);
-
-  return (
+  console.log(user)
+  return ( 
+    <>
     <div id="profile-page">
       <h1>Profile</h1>
 
@@ -27,13 +28,13 @@ export default function Profile() {
         </h2>
       )}
 
-      {user?.profile && (
+      {user && (
         <ul className="display-user">
           <li>
             <span className="display-user__label">User ID:</span> <span>{user.profile.id}</span>
           </li>
           <li>
-            <span className="display-user__label">Fullname:</span> <span>{user.profile.firstName} {user.profile.lastName}</span>
+            <span className="display-user__label">Username:</span> <span>{user.profile.username}</span>
           </li>
           <li>
             <span className="display-user__label">Email:</span> <span>{user.profile.email}</span>
@@ -42,6 +43,7 @@ export default function Profile() {
       )
       }
     </div>
+    </>
   );
 };
 

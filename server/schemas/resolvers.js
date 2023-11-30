@@ -11,14 +11,11 @@ const resolvers = {
 
       return await User.findById(context.user._id);
   },
-  categories: async () => {
-    return await Category.find();
-  },
   users: async () => {
     return await User.find();
   },
   products: async () => {
-    return Product.find().populate("category");
+    return Product.find();
   },
   product: async (parent, { _id }) => {
     return await Product.findById(_id);

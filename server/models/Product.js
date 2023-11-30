@@ -13,23 +13,9 @@ const ProductSchema = new Schema({
   description: {
     type: String,
   },
-  image: {
-    type: String,
-  },
-  quantity: {
-    type: Number,
-    min: 0,
-    default: 0,
-  },
-  postedAt: {
-    type: Date,
-    default: Date.now,
-  },
-  category: {
-    type: Schema.Types.ObjectId,
-    ref: "Category",
-    required: true,
-  },
+  seller: {
+    type: String
+  }
 });
 
 const Product = model("Product", ProductSchema);
