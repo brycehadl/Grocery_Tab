@@ -33,6 +33,7 @@ export default function Shipping() {
     };
 
     const handleInputChange = (e) => {
+        console.log(e)
         const { name, value } = e.target;
         setFormValues((prevValues) => ({
             ...prevValues,
@@ -63,7 +64,7 @@ export default function Shipping() {
                             name='houseNo'
                             placeholder='Enter House No'
                             required
-                            value={formValues.houseNo}
+                            // value={formValues.houseNo}
                             onChange={handleInputChange}
                         />
                     </div>
@@ -73,7 +74,7 @@ export default function Shipping() {
                             type='text'
                             name='city'
                             placeholder='Enter City'
-                            value={formValues.city}
+                            // value={formValues.city}
                             onChange={handleInputChange}
                         />
                     </div>
@@ -81,12 +82,12 @@ export default function Shipping() {
                         <label>Country</label>
                         <select
                             name='country'
-                            value={formValues.country}
+                            // value={formValues.country}
                             onChange={handleInputChange}
                         >
                             <option value=''>Country</option>
                             {Country && Country.getAllCountries().map((i) => (
-                                <option value={i.isoCode} key={i.isoCode}>
+                                <option value={i.isoCode} key={`country_${i.isoCode}`}>
                                     {i.name}
                                 </option>
                             ))}
@@ -96,12 +97,12 @@ export default function Shipping() {
                         <label>State</label>
                         <select
                             name='state'
-                            value={formValues.state}
+                            // value={formValues.state}
                             onChange={handleInputChange}
                         >
                             <option value=''>State</option>
                             {State && State.getAllStates('PAK').map((i) => (
-                                <option value={i.isoCode} key={i.isoCode}>
+                                <option value={i.isoCode} key={`state_${i.isoCode}`}>
                                     {i.name}
                                 </option>
                             ))}
@@ -113,7 +114,7 @@ export default function Shipping() {
                             type='number'
                             name='pinCode'
                             placeholder='Enter Pin Code'
-                            value={formValues.pinCode}
+                            // value={formValues.pinCode}
                             onChange={handleInputChange}
                         />
                     </div>
@@ -123,7 +124,7 @@ export default function Shipping() {
                             type='text'
                             name='phoneNo'
                             placeholder='Enter Phone No'
-                            value={formValues.phoneNo}
+                            // value={formValues.phoneNo}
                             onChange={handleInputChange}
                         />
                     </div>

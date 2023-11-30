@@ -8,6 +8,7 @@ import {
 } from '@apollo/client';
 
 import { StoreProvider } from './utils/store-context';
+import { AppStoreProvider } from './utils/GlobalState';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import Auth from './utils/auth';
@@ -36,12 +37,13 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <StoreProvider>
+        <AppStoreProvider>
         <div id="app-shell">
           <Nav />
           <Outlet />
           <Footer />
         </div>
-
+        </AppStoreProvider>
       </StoreProvider>
     </ApolloProvider>
   )

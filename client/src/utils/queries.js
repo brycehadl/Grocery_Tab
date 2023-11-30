@@ -4,9 +4,20 @@ export const QUERY_USER = gql`
   query user {
     user {
       _id
-      firstName
-      lastName
+      username
       email
+      orders {
+        _id
+        purchaseDate
+        products {
+          _id
+          name
+          description
+          price
+          quantity
+          image
+        }
+      }
     }
   }
 `;
@@ -15,8 +26,7 @@ export const QUERY_USERS = gql`
   query users {
     users {
       _id
-      firstName
-      lastName
+      username
       email
     }
   }
@@ -31,7 +41,7 @@ export const QUERY_PRODUCT = gql`
       description
       image
       quantity
-      category
+      
     }
   }
 `;
@@ -43,10 +53,8 @@ export const QUERY_PRODUCTS = gql`
       name
       price
       description
-      image
-      quantity
-      category
-    }
+      seller
+      }
   }
 `;
 

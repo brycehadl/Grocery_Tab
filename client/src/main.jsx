@@ -10,10 +10,11 @@ import SignUp from './pages/SignUp';
 import Login from './components/Login';
 
 import './index.scss';
-import Shipping from './pages/Home/Checkout.jsx';
+import Shipping from './components/Checkout/Checkout.jsx';
 import ConfirmOrder from './pages/Home/confirmorder.jsx';
 import PaymentForm from './pages/Home/Onlinepayment.jsx';
 import PaymentSuccess from './pages/Home/PaymentSuccessfull.jsx';
+import OrderHistory from './pages/Recent_Purchases';
 
 const router = createBrowserRouter([
   {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       {
         path: '/successfull',
         element: <PaymentSuccess />
+      },
+      {
+        path: '/recent_purchases',
+        element: <OrderHistory />
       }
     ]
   }

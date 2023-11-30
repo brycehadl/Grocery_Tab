@@ -2,10 +2,11 @@ import {
     ADD_TO_CART,
     ADD_MULTIPLE_TO_CART,
     UPDATE_CATEGORIES,
-    UPDATE_PRODUCT,
+    UPDATE_PRODUCTS,
     UPDATE_CART_QUANTITY,
     CLEAR_CART,
     REMOVE_FROM_CART,
+    USER_PROFILE
 } from './actions';
 
 const initialState = {
@@ -15,15 +16,29 @@ const initialState = {
 }
 
 export const reducer = (state = initialState, action) => {
-
+ 
     switch (action.type) {
+      case USER_PROFILE: {
+        return {
+          ...state,
+          user: {
+            ...state.user,
+            profile: {
+              id: action.payload._id,
+              email: action.payload.email,
+              username: action.payload.username,
+              
+            },
+          },
+        };
+      };
         case ADD_TO_CART:
           return {
             ...state,
             cart: [...state.cart, action.product],
           };
 
-        case UPDATE_PRODUCT:
+        case UPDATE_PRODUCTS:
           console.log(action);
           return {
             ...state,
@@ -66,6 +81,12 @@ export const reducer = (state = initialState, action) => {
               return product;
             })
           };
+
+          case TOGGLE_CART:
+      return {
+        ...state,
+        cartOpen: !state.cartOpen
+      };
 
         case CLEAR_CART:
           return {

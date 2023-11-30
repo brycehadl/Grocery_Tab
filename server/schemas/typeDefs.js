@@ -3,11 +3,11 @@ const { gql } = require("apollo-server-express");
 const typeDefs = gql`
 type User {
     _id: ID
-    firstName: String
-    lastName: String
+    username: String
     email: String
     account: String
     store: Store
+    orders: [Order]
   }
 
   type Auth {
@@ -16,7 +16,6 @@ type User {
   }
 
   type Query {
-    categories: [Category]
     user: User
     users: [User]
     products: [Product]
@@ -27,19 +26,12 @@ type User {
     order(_id: ID!): Order
   }
   
-  type Category {
-    _id: ID
-    name: String
-  }
-  
   type Product {
     _id: ID
     name: String
     price: Float
     description: String
-    image: String
-    quantity: Int
-    category: Category
+    seller: String
   }
 
   type Store {
