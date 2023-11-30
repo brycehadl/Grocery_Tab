@@ -144,7 +144,7 @@ const Home = () => {
     
       <div>
         <Link to="/checkout">
-          <Button type="button">Checkout</Button>
+          <Button type="button1">Checkout</Button>
         </Link>
       </div>
     </div>

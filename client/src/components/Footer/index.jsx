@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <div id="footer">
             <div>
-                <h3>Grocery Tab 2023.</h3>
+                <h4>Grocery Tab 2023.</h4>
             </div>
         </div>
     );
