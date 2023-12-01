@@ -35,3 +35,17 @@ export const ADD_ORDER = gql`
     }
   }
 `;
+
+export const SIGNUP =gql`
+  mutation signin($firstName: String!, $lastName: String!, $email: String!, $password: String!){
+    signin(firstName:$firstName, lastName:$lastName, email:$email, password:$password){
+      token
+      user{
+        _id
+        username
+        email
+      }
+    }
+  }
+
+`

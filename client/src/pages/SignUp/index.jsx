@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
 import './style.scss';
-
+import { useMutation } from '@apollo/client';
+import { SIGNUP } from '../../utils/mutations';
+import Auth from '../../utils/auth';
 const SignUp = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleSignUp = (e) => {
+ const [signin] = useMutation(SIGNUP)
+  const handleSignUp = async (e) => {
     e.preventDefault();
+    const {data} = await signin({
+      variables: {firstName, lastName, email, password}
+    })
     setFirstName('');
     setLastName('');
     setEmail('');
     setPassword('');
+    Auth.login(data?.signin.token)
   };
 
   return (
