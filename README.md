@@ -12,9 +12,9 @@ To install this project, all that is required is 'npm install' at the home direc
 
 To navigate through the project, simply use the navbar at the top of the page. It will prompt you to login, which when done, will gain you access to the rest of the site. You will see a home button which will take you to the home page. There will be a recent purchases button which will have all of your recent items purchased, and finally a profile button, which will show the user's own profile information. 
 
-![screenshot]()
+<img width="1507" alt="Screenshot 2023-11-30 at 6 27 48 PM" src="https://github.com/brycehadl/Grocery_Tab/assets/133932050/c8e3beca-5e96-488b-a69d-00389e41bfe0">
 
-Deployed application - 
+Deployed application - https://grocery-tabs-e0be1339c12c.herokuapp.com/
 
 ## Credits
 
